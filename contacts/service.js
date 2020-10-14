@@ -14,7 +14,6 @@ module.exports = function (done) {
         confirm: require('./xactions/confirm')
       }
     },
-    workflow: 'model',
     createOne: true,
     findOne: true,
     find: true,

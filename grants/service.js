@@ -13,7 +13,6 @@ var Grants = grants.model;
 module.exports = function (done) {
   var service = {
     auth: {},
-    workflow: 'model',
     find: true,
     findOne: true,
     replaceOne: true,

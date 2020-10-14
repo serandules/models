@@ -9,7 +9,6 @@ exports.service = function (done) {
         '^\/.*'
       ]
     },
-    workflow: 'model',
     find: true,
     findOne: true,
     createOne: true,

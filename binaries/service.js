@@ -25,7 +25,6 @@ var update = function (plugin, found, stream, data, done) {
 module.exports = function (done) {
   var service = {
     auth: {},
-    workflow: 'model',
     updateOne: true,
     findOne: true,
     find: true,

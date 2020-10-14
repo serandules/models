@@ -16,7 +16,6 @@ module.exports = function (done) {
       auth: {
         GET: allowed
       },
-      workflow: 'model',
       findOne: true,
       find: true,
       createOne: true,

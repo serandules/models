@@ -12,7 +12,6 @@ var validators = require('./validators');
 module.exports = function (done) {
   var service = {
     auth: {},
-    workflow: 'model',
     findOne: true
   };
 
