@@ -1,0 +1,40 @@
+{
+  "name": "models",
+  "description": "models",
+  "version": "0.0.0",
+  "author": {
+    "name": "serandives",
+    "email": "serandives@gmail.com"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "async": "1.*",
+    "node-uuid": "1.*",
+    "express": "4.*",
+    "lodash": "4.17.4",
+    "temp": "0.8.3",
+    "nconf": "0.10.0",
+    "logger": "serandules/logger#master",
+    "utils": "serandules/utils#master",
+    "model": "serandules/model#master",
+    "model-vehicles": "serandules/model-vehicles#master",
+    "formida": "serandules/formida#master",
+    "errors": "serandules/errors#master",
+    "auth": "serandules/auth#master",
+    "throttle": "serandules/throttle#master",
+    "serandi": "serandules/serandi#master"
+  },
+  "devDependencies": {
+    "mocha": "5.2.0",
+    "parse-link-header": "1.0.1",
+    "pot": "serandules/pot#master",
+    "request": "2.81.0",
+    "should": "11.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/serandules/models.git"
+  }
+}
