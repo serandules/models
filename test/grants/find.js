@@ -2,9 +2,10 @@ var log = require('logger')('service-grants:test:find');
 var should = require('should');
 var request = require('request');
 var pot = require('pot');
-var mongoose = require('mongoose');
 var errors = require('errors');
-var Grants = require('model-grants');
+
+var models = require('models');
+var Grants = models.model('grants');
 
 describe('GET /grants', function () {
   var client;

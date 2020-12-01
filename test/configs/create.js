@@ -22,7 +22,7 @@ describe('POST /configs', function () {
     value: 'v1'
   };
 
-  it('with no media type', function (done) {
+  it.only('with no media type', function (done) {
     request({
       uri: pot.resolve('apis', '/v/configs'),
       method: 'POST',

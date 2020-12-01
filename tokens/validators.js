@@ -8,6 +8,7 @@ var serandi = require('serandi');
 var utils = require('utils');
 var mongutils = require('mongutils');
 var model = require('model');
+var models = require('models');
 var tokens = require('../tokens');
 var users = require('../users');
 var clients = require('../clients');
@@ -315,17 +316,17 @@ var facebookGrant = function (req, res, next) {
                 log.error('users:create', err);
                 return next(errors.serverError());
               }
-              utils.workflow('model-users', function (err, workflow) {
+              models.workflow('model-users', function (err, workflow) {
                 if (err) {
                   return next(err);
                 }
                 var status = 'registered';
                 var usr = utils.json(user);
-                utils.toPermissions(usr.id, workflow, status, usr, function (err, permissions) {
+                models.toPermissions(usr.id, workflow, status, usr, function (err, permissions) {
                   if (err) {
                     return next(err);
                   }
-                  utils.toVisibility(usr.id, workflow, status, usr, function (err, visibility) {
+                  models.toVisibility(usr.id, workflow, status, usr, function (err, visibility) {
                     if (err) {
                       return next(err);
                     }

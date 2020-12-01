@@ -4,7 +4,9 @@ var errors = require('errors');
 var should = require('should');
 var request = require('request');
 var pot = require('pot');
-var Grants = require('model-grants');
+
+var models = require('models');
+var Grants = models.model('grants');
 
 describe('PUT /grants/:id', function () {
   var client;

@@ -2,12 +2,11 @@ var log = require('logger')('service-users:test:find');
 var should = require('should');
 var request = require('request');
 var pot = require('pot');
-var mongoose = require('mongoose');
 var errors = require('errors');
-var utils = require('utils');
 
-var Users = utils.model('users');
-var Otps = utils.model('otps');
+var models = require('models');
+var Users = models.model('users');
+var Otps = models.model('otps');
 
 describe('POST /users (recover)', function () {
   var user;

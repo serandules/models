@@ -4,9 +4,9 @@ var request = require('request');
 var _ = require('lodash');
 var pot = require('pot');
 var errors = require('errors');
-var utils = require('utils');
 
-var Groups = utils.model('groups');
+var models = require('models');
+var Groups = models.model('groups');
 
 describe('PUT /users', function () {
   var client;

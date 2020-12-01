@@ -5,7 +5,8 @@ var _ = require('lodash');
 var pot = require('pot');
 var errors = require('errors');
 
-var Groups = require('model-groups');
+var models = require('models');
+var Groups = models.model('groups');
 
 describe('PUT /users', function () {
   var client;

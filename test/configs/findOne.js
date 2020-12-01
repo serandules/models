@@ -5,8 +5,7 @@ var should = require('should');
 var request = require('request');
 var async = require('async');
 var pot = require('pot');
-var utils = require('utils');
-var find = utils.method('configs', 'find');
+var models = require('models');
 
 describe('GET /configs/:id', function () {
   var configs;
@@ -24,13 +23,15 @@ describe('GET /configs/:id', function () {
   };
 
   before(function (done) {
-    find(function (err, b) {
-      if (err) {
-        return done(err);
-      }
-      configs = b;
-      done();
-    })
+    models.method('configs', 'find', function (err, find) {
+      find(function (err, b) {
+        if (err) {
+          return done(err);
+        }
+        configs = b;
+        done();
+      });
+    });
   });
 
   it('GET /configs/boot', function (done) {

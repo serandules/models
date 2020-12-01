@@ -4,8 +4,9 @@ var errors = require('errors');
 var should = require('should');
 var request = require('request');
 var pot = require('pot');
-var vehicles = require('./vehicles');
-var Vehicles = require('model-vehicles');
+
+var models = require('models');
+var Vehicles = models.model('vehicles');
 
 var BUMP_UP_THRESHOLD = 14 * 24 * 60 * 60 * 1000;
 

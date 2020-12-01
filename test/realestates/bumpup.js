@@ -5,7 +5,9 @@ var should = require('should');
 var request = require('request');
 var pot = require('pot');
 var realestates = require('./realestates');
-var RealEstates = require('model-realestates');
+
+var models = require('models');
+var RealEstates = models.model('realestates');
 
 var BUMP_UP_THRESHOLD = 14 * 24 * 60 * 60 * 1000;
 

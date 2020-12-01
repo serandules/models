@@ -1,4 +1,4 @@
 --recursive
 --require ./test/mocha.js
---timeout 600000
+--timeout 60000
 --exit
